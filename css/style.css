@@ -19,6 +19,7 @@ body {
   background-color: #fff;
   font-family: 'Inter', sans-serif;
   background-color:#171836;
+  overflow-x: hidden;
 }
 
 img {
@@ -96,7 +97,7 @@ select{
   color: #fff;
   background-image: url('../img/lang-select.svg');
   background-repeat: no-repeat;
-  background-position: top 0 right 18px;
+  background-position: top 0 right 0;
   font-weight: 500;
   font-size: 12px;
   color: #D1D1D7;
@@ -154,7 +155,7 @@ option{
 }
 
 .search-input{
-  width: 300px;
+  width: 400px;
   height: 50px;
   font-size: 16px;
   line-height: 150%;
@@ -163,6 +164,13 @@ option{
   padding: 5px;
   color: #fff;
   outline: none;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
 }
 
 .search-input::placeholder{
@@ -356,8 +364,24 @@ option{
   color: #FB5048;
 }
 
+#featured{
+  position: relative;
+}
+
 .featured{
   padding: 102px 0;
+
+}
+
+#featured::after{
+  content: "";
+  position: absolute;
+  background-image: url('../img/bg1.svg');
+  width:711px;
+  height: 983px;
+  top: -367px;
+  right: -100px;
+  z-index: -1;
 }
 
 .featured-item{
@@ -401,6 +425,8 @@ option{
   color: rgba(255, 255, 255, 0.6);
   margin-top: 23px;
 }
+
+
 
 .classes{
   padding: 66px 0;
@@ -571,6 +597,20 @@ option{
   display: inline-block;
 }
 
+#webinar{
+  position: relative;
+}
+
+#webinar::before{
+  content: "";
+  position: absolute;
+  background-image: url('../img/bg2.svg');
+  width: 628px;
+  height: 739px;
+  bottom: 0;
+  left: 0;
+}
+
 .webinar{
   padding-top: 109px;
   padding-bottom: 84px;
@@ -633,6 +673,15 @@ option{
   line-height: 150%;
   color: #D1D1D7;
   text-shadow: 0px 5px 10px #2E3062;
+  width: 198px;
+}
+.webinar-link::after{
+  content: "";
+  display: inline-block;
+  background-image: url('../img/right-arrow.svg');
+  width: 20px;
+  height: 10px;
+  margin-left: 10px;
 }
 
 .bx-right-arrow-alt{
@@ -728,11 +777,6 @@ option{
   color: #F5453D;
 }
 
-.pricing-top-span2{
-  font-size: 14px;
-  vertical-align: top;
-}
-
 .pricing-top-span1{
   font-size: 28px;
 }
@@ -794,4 +838,132 @@ option{
   margin-bottom: 100px;
   background: linear-gradient(102.01deg, #23265C 1.96%, #352A56 101.68%);
   border-radius: 40px;
+  height: 434px;
+  position: relative;
+  padding-top: 85px;
+  padding-left: 101px;
+}
+
+.our-apps::after{
+  content: "";
+  position: absolute;
+  background-image: url('../img/Group\ 1253.png');
+  width: 402.67px;
+  height: 325px;
+  background-repeat: no-repeat;
+  bottom: 0;
+  right: 105px;
+}
+
+.our-apps-title{
+  font-weight: 600;
+  font-size: 47.2727px;
+  line-height: 160%;
+  color: #FFFFFF;
+  opacity: 0.7;
+}
+
+.our-apps-text{
+  width: 406px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 180%;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 12px;
+  margin-bottom: 32px;
+}
+
+.our-apps-list{
+  width: 336.62px;
+}
+
+.our-apps-link{
+  background-image: url('../img/playmarket.png');
+  width:165px;
+  height: 72px;
+  display: inline-block;
+  background-repeat: no-repeat;
+}
+
+.our-apps-item:nth-child(2) .our-apps-link{
+  background-image: url('../img/appstore.png');
+  width:148px;
+  height: 50px;
+}
+
+footer{
+  height: 387px
+}
+
+.footer{
+  padding-top: 48px;
+  padding-bottom: 30px;
+  position: relative;
+}
+
+.footer-logo{
+  position: relative;
+  top: -19px;
+}
+
+.column-1{
+  width: 234px;
+}
+
+.column-1-list{
+  width: 154px;
+}
+
+.column-1-text{
+  font-size: 16px;
+  line-height: 170%;
+  color: rgba(255, 255, 255, 0.8);
+  opacity: 0.6;
+  margin-top: 8px;
+  margin-bottom: 24px;
+}
+
+.columns-list{
+  display: flex;
+  flex-direction: column;
+}
+
+.columns-title{
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 24px;
+}
+
+.columns-link{
+  font-size: 20px;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.7);
+  opacity: 0.6;
+}
+
+.columns-item{
+  margin-bottom: 20px;
+}
+
+.column-2 ,.column-3 ,.column-4 ,.column-5 {
+  margin-left: 81px;
+}
+
+.column-2{
+  margin-left: 123px;
+}
+
+.copyright{
+  text-align: center;
+  margin-top: 86px;
+}
+
+.copyright-link{
+  font-size: 16px;
+  line-height: 19px;
+  color: #8F91D0;
 }
