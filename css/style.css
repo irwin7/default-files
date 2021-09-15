@@ -60,8 +60,12 @@ nav{
   margin: 0 auto;
 }
 
-.nav-item:hover .nav-link{
+.nav-item.active .nav-link{
   font-weight: 500;
+  color: #FFFFFF;
+}
+
+.nav-item:hover .nav-link{
   color: #FFFFFF;
 }
 
@@ -97,10 +101,11 @@ select{
   color: #fff;
   background-image: url('../img/lang-select.svg');
   background-repeat: no-repeat;
-  background-position: top 0 right 0;
+  background-position: top 0 right 2px;
   font-weight: 500;
   font-size: 12px;
   color: #D1D1D7;
+  line-height: 24px;
 }
 
 option{
@@ -111,13 +116,20 @@ option{
 .login-btn{
   background: #F5443B;
   border-radius: 6px;
-  padding: 12px 32px;
+  padding: 10px 30px;
   font-weight: bold;
   font-size: 14px;
   line-height: 17px;
   color: #FFFFFF;
   display: inline-block;
   margin-left: 30px;
+  border: 2px solid #F5443B;
+  transition: all 0.4s ease;
+}
+
+.login-btn:hover{
+  background-color: transparent;
+  color: #F5443B;
 }
 
 #hero{
@@ -203,11 +215,21 @@ select {
   border: 1px solid #9a9ccb99;
   border-radius: 8px;
   margin-bottom: 20px;
+  transition: all 0.4s ease;
 }
 
 .suggestions-link{
   font-size: 14px;
   color: #9a9ccb99;
+  transition: all 0.4s ease;
+}
+
+.suggestions-item:hover{
+  border-color: #fff;
+}
+
+.suggestions-item:hover .suggestions-link{
+  color: #fff;
 }
 
 .suggestions-item:nth-child(2) , .suggestions-item:nth-child(5){
@@ -574,15 +596,21 @@ select {
   font-size: 14px;
   line-height: 17px;
   color: #FFFFFF;
-  width: 155px;
-  height: 41px;
+  width: 153px;
+  height: 39px;
   left: 48px;
   top: 44px;
   padding: 12px 32px;
   background: #F5443B;
   border-radius: 6px;
   opacity: 0;
+  border: 2px solid #F5443B;
   transition: all 0.3s ease;
+}
+
+.classes-btn:hover{
+  color: #F5443B;
+  background-color: transparent;
 }
 
 .classes-last-btn{
@@ -595,6 +623,12 @@ select {
   padding: 16px 32px;
   margin-left: 500px;
   display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.classes-last-btn:hover{
+  color: #fff;
+  background-color: #F5443B;
 }
 
 #webinar{
@@ -721,6 +755,8 @@ select {
   border-radius: 20px;
   border: 2px solid #292A55;
   padding: 40px 36px 36px 36px;
+  position: relative;
+  z-index: 1;
 }
 
 .pricing-top{
@@ -749,12 +785,14 @@ select {
 .pricing-item:nth-child(3)::after{
   content: "";
   position: absolute;
-  background-image: url('../img/pricing-after.svg');
+  background-image: url('../img/popular.svg');
   width: 98px;
   height: 98px;
   top: 0;
   right: 0;
+  z-index: 0;
   border-radius: 20px;
+  opacity: 1;
 }
 
 .pricing-top-text1{
@@ -808,13 +846,22 @@ select {
   font-weight: bold;
   font-size: 14px;
   line-height: 17px;
-  color: #F5443B;
-  opacity: 0.5;
+  color: #fff;
   border: 1px solid #F5443B;
   border-radius: 6px;
   transition: all 0.4s ease;
   position: relative;
   top: 27%;
+  background-color: #F5443B;
+}
+
+.pricing-btn:hover{
+  background-color: transparent;
+  color: #F5443B;
+}
+
+.pricing-btn:active{
+  opacity: 0.6;
 }
 
 .pricing-item:nth-child(2) .pricing-btn{
@@ -825,12 +872,6 @@ select {
 .pricing-item:nth-child(3) .pricing-btn{
   top: 2%;
   padding: 16px 96px;
-}
-
-.pricing-btn:hover{
-  background-color: #F5443B;
-  color: #fff;
-  opacity: 1;
 }
 
 .our-apps{
@@ -943,6 +984,12 @@ footer{
   line-height: 24px;
   color: rgba(255, 255, 255, 0.7);
   opacity: 0.6;
+  transition: all 0.4s ease;
+}
+
+.columns-item:hover .columns-link{
+  opacity: 1;
+  color: rgba(255, 255, 255, 0.89);
 }
 
 .columns-item{
